@@ -1,0 +1,21 @@
+This is a small ruby script which fetches all images of a 4chan channel recursively by screenscraping.
+
+Short: Get images on your machine and have both hands free.
+
+== Installation
+You need
+ * a Unixish environment
+ * ruby
+ * rubygems
+ * hpricot (sudo gem install hpricot)
+
+== Usage
+
+   ruby 4chan.rb [channel]
+
+      channel: one, two or more letters. Defaults to s
+
+Open your favourite image watching application. It should have a slideshow option 
+and should be able to sort by modification time. On Linux we recommend GQview.
+
+They can be found in ~/images/4chan/[channel]
