@@ -26,7 +26,7 @@ module Four
       puts
     end
     def images
-      doc/"span.filesize a"
+      doc ? doc/"span.filesize a" : []
     end
     def mark_image_as_fetched(image_url)
       Image.mark_as_fetched image_url
@@ -171,7 +171,7 @@ module Four
       $stdout.sync=true
     end
     def reply_links
-      (doc/"//a[@href^='res/'").select {|a| a.inner_html == 'Reply' }
+      doc ? (doc/"//a[@href^='res/'").select {|a| a.inner_html == 'Reply' } : []
     end
     def fetch_replies
       reply_links.each do |link|
