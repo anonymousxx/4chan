@@ -165,7 +165,7 @@ module Four
     attr_accessor :page
     attr_reader :channel
     def initialize(chan=nil)
-      @section = 's' if chan.nil? or chan.empty?
+      @section = (chan.nil? or chan.empty?) ? 's' : chan
       @channel = self # HACK for ImageFetcher
       @page = nil
       $stdout.sync=true
